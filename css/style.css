@@ -1,4 +1,4 @@
-/****** General ***********/
+/***** GENERAL *****/
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -7,6 +7,67 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/*(RÈGLES GÉNÉRALES BODY AND MAIN)*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
 }
 
 /***** HEADER *****/
@@ -39,7 +100,7 @@ nav ul {
     flex-direction: row;
     list-style-type: none;
     padding-top: 14px;
-    margin: 0px 0px 46px 0px;
+    margin: 0px 0px 0px 0px;
     gap: 68px;
 }
 
@@ -53,14 +114,16 @@ nav li:hover {
 /***** INFO GROUP *****/
 
 .info-group {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 35px;
 }
 
 /*(TITRE ET TEXTE)*/
 
 .titre-texte {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 }
 
@@ -74,16 +137,18 @@ nav li:hover {
 
 /*(BARRE DE RECHERCHE)*/
 
-.barre-recherche {
+.barre-recherche form {
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-.position {
+.icon-contenair-position {
     padding: 15px 19px;
     background-color: var(--main-bg-color);
     border-start-start-radius: 15px;
     border-end-start-radius: 15px;
+    font-size: 18px;
 }
 
 .champ-texte {
@@ -132,10 +197,11 @@ nav li:hover {
     display: flex;
     gap: 15px;
     padding: 0px;
+    margin: 0px;
     list-style-type: none;
 }
 
-.liste-filtre li {
+.liste-filtre a {
     display: flex;
     gap: 10px;
     padding: 13px 19px 13px 19px;
@@ -143,10 +209,18 @@ nav li:hover {
     border-radius: 25px;
     font-size: 17px;
     font-weight: bold;
+    align-items: center;
 }
 
-.liste-filtre li:hover {
+.liste-filtre a:hover {
     background-color: var(--filter-bg-color);
+}
+
+.liste-filtre .fa-solid {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    width: 22px;
 }
 
 /*(BARRE INFO)*/
@@ -155,7 +229,6 @@ nav li:hover {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-bottom: 35px;
 }
 
 .icon-info {
@@ -163,64 +236,11 @@ nav li:hover {
     justify-content: center;
     align-items: center;
     border: 2px solid var(--main-bg-color);
-    height: 20px;
-    width: 20px;
     border-radius: 50%;
-    padding: 1px;
+    padding: 2px 7px;
 }
 
-.fa-solid {
-    color: var(--main-color);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
-.main-container {
-    display: grid;
-    gap: 30px;
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
-
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.card img {
-    object-fit: cover;
-}
-
-.card-title {
-    font-size: 16px;
-}
-
-.euro {
-    font-weight: 700;
-}
-
-.neutral-star {
-    color: var(--main-bg-color)
-}
-
-/****** Hebergements And Populaires ***********/
+/***** HEBERGEMENTS AND POPULAIRES *****/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -233,7 +253,7 @@ a {
     box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
+/***** HEBERGEMENTS *****/
 .hebergements {
     display: flex;
     flex-direction: column;
@@ -306,7 +326,7 @@ a {
     margin-bottom: 5px;
 }
 
-/****** Populaires ***********/
+/***** POPULAIRES *****/
 .populaires {
     width: 32%;
 }
