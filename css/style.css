@@ -105,7 +105,6 @@ nav {
 
 nav ul {
     display: flex;
-    flex-direction: row;
     list-style-type: none;
     padding-top: 14px;
     margin: 0px 0px 0px 0px;
@@ -160,7 +159,7 @@ nav li:hover {
 }
 
 .champ-texte {
-    padding: 13px 19px;
+    padding: 14px 19px;
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: var(--main-bg-color);
@@ -178,7 +177,7 @@ nav li:hover {
     font-size: 18px;
 }
 
-.bouton {
+.bouton-rechercher {
     padding: 14px 19px;
     border: none;
     border-end-end-radius: 15px;
@@ -187,6 +186,16 @@ nav li:hover {
     color: var(--main-bg-color);
     font-weight: bold;
     font-size: 18px;
+}
+
+.loupe-rechercher {
+    border-radius: 15px;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    font-size: 17px;
+    padding: 15px 16px;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
+    display: none;
 }
 
 /*(FILTRES)*/
@@ -255,7 +264,6 @@ nav li:hover {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -265,6 +273,7 @@ nav li:hover {
 .hebergements {
     display: flex;
     flex-direction: column;
+    background-color: var(--main-bg-color);
     width: 65%;
     gap: 30px;
 }
@@ -296,7 +305,7 @@ nav li:hover {
 .hebergements-cards-group1 .card-content {
     display: flex;
     flex-direction: column;
-    padding: 0px 15px;
+    padding: 0px 15px 0px 10px;
     gap: 8px;
 }
 
@@ -341,7 +350,7 @@ nav li:hover {
 .hebergements-cards-group2 .card-content {
     display: flex;
     flex-direction: column;
-    padding: 0px 15px;
+    padding: 0px 15px 0px 10px;
     gap: 8px;
 }
 
@@ -362,6 +371,10 @@ nav li:hover {
 /***** POPULAIRES *****/
 .populaires {
     width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    background-color: var(--main-bg-color);
 }
 
 .populaires-title {
@@ -370,9 +383,14 @@ nav li:hover {
     align-items: center;
 }
 
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
 }
 
 .populaires-cards img {
@@ -432,13 +450,16 @@ nav li:hover {
 }
 
 .activites-cards .card-txt {
+    display: flex;
+    align-items: center;
     padding: 20px 19px;
 }
 
 /***** FOOTER *****/
 
 footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,33.33%);
 }
 
 /*(FOOTER - A PROPOS)*/
@@ -446,8 +467,8 @@ footer {
 .footer-a-propos {
     display: flex;
     flex-direction: column;
-    padding: 20px 233px 20px 20px;
     gap: 15px;
+    padding: 20px;
     background-color: var(--main-bg-color);
 }
 
@@ -465,8 +486,8 @@ footer {
 .footer-nos-hebergements {
     display: flex;
     flex-direction: column;
-    padding: 20px 255px 20px 20px;
     gap: 15px;
+    padding: 20px;
     background-color: var(--main-bg-color);
 }
 
@@ -484,8 +505,8 @@ footer {
 .footer-assistance {
     display: flex;
     flex-direction: column;
-    padding: 20px 313px 20px 20px;
     gap: 15px;
+    padding: 20px;
     background-color: var(--main-bg-color);
 }
 
@@ -498,44 +519,248 @@ footer {
     list-style-type: none;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+/***** MEDIA QUERIES *****/
 
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/*** MEDIUM DEVICES - (TABLETS, LESS/EQUAL THAN 1024px) ***/
+
 @media (max-width: 1024px) {
-    .hebergements-and-populaires {
-        flex-direction: column;
-    }
 
-    .hebergements {
-        width: 100%;
-    }
+/*(FILTRES - TABLETS)*/
 
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .populaires-cards a {
-        width: 30%;
-    }
-
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
+.barre-filtre {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-/* Small devices (phones, less than 768px) */
+.liste-filtre a {
+    font-size: 16px;
+}
+
+/*(HEBERGEMENTS AND POPULAIRES - TABLETS)*/
+
+.hebergements-and-populaires {
+    flex-direction: column;
+}
+
+/*(HEBERGEMENTS - TABLETS)*/
+
+.hebergements {
+    width: 100%;
+}
+
+.hebergements .card-title {
+    font-size: 15px;
+}
+
+.hebergements .card-subtitle {
+    font-size: 14px;
+}
+
+/*(POPULAIRES - TABLETS)*/
+
+.populaires {
+    width: 100%;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.populaires-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.populaires-cards a {
+    flex: 1;
+}
+
+.populaires-cards .card-content {
+    width: 66%;
+}
+
+.populaires-cards .card-title {
+    font-size: 15px;
+}
+
+.populaires-cards .card-subtitle {
+    font-size: 14px;
+}
+
+/*(ACTIVITES - TABLETS)*/
+
+.activites-cards img {
+    height: 200px;
+}
+
+.activites-cards .card-txt {
+    height: 30px;
+}
+}
+
+/*** SMALL DEVICES - PHONES, LESS THAN 768px) ***/
+
 @media (max-width: 767.98px) {
-    /* ... */
+
+/*(RÈGLES GÉNÉRALES - PHONES)*/
+
+.main-container {
+    padding: 0px;
+}
+
+/*(HEADER - PHONES)*/
+
+header {
+    flex-direction: column;
+    align-items: center;
+}
+
+/*(NAV - PHONES)*/
+
+nav, nav ul {
+    padding: 0px;
+    gap: 0px;
+}
+
+nav {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+nav ul {
+    flex: 1;
+}
+
+nav li {
+    border-bottom: 2px solid var(--main-bg-color);
+    margin-bottom: -17px;
+    padding-bottom: 15px;
+    flex: 1;
+}
+
+nav li:hover {
+    border-top: none;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-bottom: 2px solid #0065FC;
+    margin-bottom: -17px;
+    padding-bottom: 15px;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -17px;
+    padding-bottom: 15px;
+    flex: 1;
+}
+
+/*(INFO GROUP - PHONES)*/
+
+.info-group {
+    padding: 0px 20px;
+}
+
+/*(BARRE DE RECHERCHE - PHONES)*/
+
+.champ {
+    width: 163px;
+}
+
+.loupe-rechercher-mobile {
+    position: relative;
+    right: 10px;
+}
+
+.loupe-rechercher {
+    display: unset;
+}
+
+.bouton-rechercher {
+    display: none;
+}
+
+/*(FILTRES - PHONES)*/
+
+.liste-filtre ul {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.liste-filtre a {
+    font-size: 14px;
+}
+
+/*(HEBERGEMENTS AND POPULAIRES - PHONES)*/
+
+.hebergements-and-populaires {
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+
+.hebergements-and-populaires section {
+    border-radius: 0px;
+    padding: 30px 20px;
+}
+
+/*(POPULAIRES - PHONES)*/
+
+.populaires {
+    margin-top: 0px;
+}
+
+.populaires-cards {
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*(HEBERGEMENTS - PHONES)*/
+
+.hebergements {
+    gap: 15px;
+    background-color: transparent;
+}
+
+.hebergements-title {
+    padding-bottom: 5px;
+}
+
+.hebergements-cards-group1 {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hebergements-cards-group2 {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hebergements-expand {
+    padding-top: 5px;
+}
+
+/*(ACTIVITES - PHONES)*/
+
+.activites-cards {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activites-cards img {
+    height: 141px;
+}
+
+.activites-cards .card-txt {
+    height: 19px;
+}
+
+/*(FOOTER - PHONES)*/
+
+footer {
+    grid-template-columns: none;
+}
+
+.footer-a-propos,.footer-nos-hebergements,.footer-assistance {
+    padding: 30px;
+}
 }
