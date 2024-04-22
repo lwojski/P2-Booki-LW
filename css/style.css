@@ -74,6 +74,7 @@ main {
     flex-direction: column;
     gap: 30px;
     width: 100%;
+    min-width: 320px;
     max-width: 1440px;
     padding: 0 50px;
 }
@@ -619,7 +620,7 @@ nav a {
 /*(BARRE DE RECHERCHE - PHONES)*/
 
 .champ {
-    width: 165px;
+    width: 205px;
 }
 
 .loupe-rechercher-mobile {
@@ -637,12 +638,22 @@ nav a {
 
 /*(FILTRES - PHONES)*/
 
+.liste-filtre {
+    width: 100%;
+}
+
 .liste-filtre ul {
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 10px;
+}
+
+.liste-filtre li {
+    display: flex;
 }
 
 .bouton-filtre {
+    flex-grow: 1;
     font-size: 14px;
 }
 
@@ -680,12 +691,12 @@ nav a {
     padding-bottom: 5px;
 }
 
-.hebergements-cards-group1 {
+.hebergements-cards {
     flex-direction: column;
     gap: 15px;
 }
 
-.hebergements-cards-group2 {
+.hebergements-cards {
     flex-direction: column;
     gap: 15px;
 }
@@ -718,4 +729,14 @@ footer {
 .footer-a-propos,.footer-nos-hebergements,.footer-assistance {
     padding: 30px;
 }
+}
+
+/*** VERY SMALL DEVICES - PHONES, LESS THAN 375px) ***/
+
+@media (max-width: 374.98px) {
+
+.champ {
+    width: 165px;
+}
+
 }
