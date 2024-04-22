@@ -218,7 +218,7 @@ nav li:hover {
     list-style-type: none;
 }
 
-.liste-filtre a {
+.bouton-filtre {
     display: flex;
     gap: 10px;
     padding: 13px 19px 13px 19px;
@@ -227,9 +227,10 @@ nav li:hover {
     font-size: 17px;
     font-weight: bold;
     align-items: center;
+    background-color: transparent;
 }
 
-.liste-filtre a:hover {
+.bouton-filtre:hover {
     background-color: var(--filter-bg-color);
 }
 
@@ -488,7 +489,7 @@ footer {
     gap: 20px;
 }
 
-.liste-filtre a {
+.bouton-filtre {
     font-size: 16px;
 }
 
@@ -641,7 +642,7 @@ nav a {
     gap: 10px;
 }
 
-.liste-filtre a {
+.bouton-filtre {
     font-size: 14px;
 }
 
