@@ -287,12 +287,14 @@ nav li:hover {
 }
 
 .hebergements-cards a {
+    display: flex;
     flex: 1;
 }
 
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 4px;
 }
 
@@ -306,6 +308,7 @@ nav li:hover {
 .hebergements-cards .card-content {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding: 0px 15px 0px 10px;
     gap: 8px;
 }
@@ -313,11 +316,17 @@ nav li:hover {
 .hebergements-cards .card-txt {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 8px;
 }
 
 .hebergements-cards .card-title {
     margin-top: 5px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .hebergements-cards .card-rating {
@@ -392,10 +401,14 @@ nav li:hover {
 }
 
 .activites-cards a {
+    display: flex;
     flex: 1;
 }
 
 .activites-cards .card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 0px 0px 0px 0px;
 }
 
@@ -409,6 +422,7 @@ nav li:hover {
 .activites-cards .card-txt {
     display: flex;
     align-items: center;
+    flex-grow: 1;
     padding: 20px 19px;
 }
 
@@ -548,10 +562,6 @@ footer {
 
 .activites-cards img {
     height: 200px;
-}
-
-.activites-cards .card-txt {
-    height: 30px;
 }
 }
 
@@ -738,5 +748,4 @@ footer {
 .champ {
     width: 165px;
 }
-
 }
