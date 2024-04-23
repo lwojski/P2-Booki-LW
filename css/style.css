@@ -459,7 +459,13 @@ footer {
     gap: 20px;
 }
 
+.liste-filtre li {
+    display: flex;
+}
+
+
 .bouton-filtre {
+    flex-grow: 1;
     font-size: 16px;
 }
 
@@ -613,12 +619,7 @@ nav a {
     gap: 20px 10px;
 }
 
-.liste-filtre li {
-    display: flex;
-}
-
 .bouton-filtre {
-    flex-grow: 1;
     font-size: 14px;
 }
 
